@@ -55,8 +55,9 @@ app.get('/', function(req, res) {
     else res.send('login failure')
 })
 
-app.get('/login', function(req, res) {
-    res.send()
+app.get('/logout', function(req, res) {
+    req.logout()
+    res.redirect('/login.html')
 })
 
 app.listen(3000)
